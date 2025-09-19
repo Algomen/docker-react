@@ -15,4 +15,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile.dev --tag alvarogomen93/react-app
     - name: Run tests
-      run: docker run -e CI=true alvarogomen93/react-app npm run test
+      run: docker run alvarogomen93/react-app npm run test -- --coverage
